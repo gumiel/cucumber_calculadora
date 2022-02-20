@@ -1,9 +1,10 @@
 const {Given, When, Then} = require('cucumber');
 const Selector = require('testcafe').Selector;
-const Role = require('testcafe').Role;
+
 
 Given('In open the calculator page', async function(){
-    await testController.navigateTo('http://localhost/calculadora/'); // ingresa a la pagina de la calculadora
+    // await testController.navigateTo('http://localhost/calculadora/index.php'); // ingresa a la pagina de la calculadora
+    await testController.navigateTo('http://localhost/calculadora/index.php?operacion=sumar'); // ingresa a la pagina de la calculadora
 });
 
 When ('I enter the first value {string}', async function (valor1){
